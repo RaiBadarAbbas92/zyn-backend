@@ -1,4 +1,5 @@
 from sqlmodel import Session, select
+from sqlalchemy import func
 from typing import List, Optional
 from datetime import datetime
 from app.models import User, Product, Review, Order, OrderItem, ProductImage, PaymentProof, Design, DesignVote, VideoReview, CouponCode, CouponUsage
