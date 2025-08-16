@@ -1,0 +1,45 @@
+{
+  "name": "Zenthreon Backend",
+  "description": "FastAPI backend for Zenthreon e-commerce platform",
+  "repository": "https://github.com/yourusername/zenthreon-backend",
+  "logo": "",
+  "keywords": ["python", "fastapi", "ecommerce", "postgresql"],
+  "env": {
+    "DATABASE_URL": {
+      "description": "PostgreSQL database URL",
+      "value": "postgresql://neondb_owner:npg_eF53RABZmaJw@ep-noisy-forest-afr0tfd1-pooler.c-2.us-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+    },
+    "SECRET_KEY": {
+      "description": "Secret key for JWT tokens",
+      "generator": "secret"
+    },
+    "CLOUDINARY_CLOUD_NAME": {
+      "description": "Cloudinary cloud name",
+      "value": "dufcjjaav"
+    },
+    "CLOUDINARY_API_KEY": {
+      "description": "Cloudinary API key",
+      "value": "272941854117965"
+    },
+    "CLOUDINARY_API_SECRET": {
+      "description": "Cloudinary API secret",
+      "value": "Y7QIdlz5fDybIBoT-kEEC_svUrk"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:mini"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
